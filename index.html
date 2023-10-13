@@ -113,6 +113,26 @@
 
   <section class="section">
     <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+            <img src="./static/images/method.png">
+            <p>
+              The overall architecture of TuneMV3D.
+               It adopts multi-view as 3D representation and utilizes 
+               (a)<b> Interactive Diffusion</b> to exchange information between multiple views and obtain 3D consistent interactive features to modulate (b) the pre-trained 2D foundational image diffusion model.
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
           <div class="has-text-centered">
@@ -130,7 +150,10 @@
         <div class="column is-full-width">
           <div class="has-text-centered">
             <h2 class="title is-3">Text to 3D Models</h2>
-            <video autoplay="autoplay" loop="loop" width="24%" controls="controls">
+            <video autoplay controls muted loop playsinlin>
+              <source src="./static/videos/output.mp4" type="video/mp4" codecs="avc1.4d002a, mp4a.40.2">
+            </video>
+            <!-- <video autoplay="autoplay" loop="loop" width="24%" controls="controls">
               <source src="./static/videos/1.mp4" type="video/mp4">
             </video>
             <video autoplay="autoplay" loop="loop" width="24%" controls="controls">
@@ -165,7 +188,7 @@
             </video>
             <video autoplay="autoplay" loop="loop" width="24%" controls="controls">
               <source src="./static/videos/12.mp4" type="video/mp4">
-            </video>
+            </video> -->
           </div>
         </div>
       </div>
@@ -191,10 +214,10 @@
           <div class="has-text-centered">
             <h2 class="title is-3">More Results</h2>
           </div>
-          <video autoplay="autoplay" loop="loop" width="49%" controls="controls">
+          <video autoplay controls muted loop playsinlin>
             <source src="./static/videos/13.mp4" type="video/mp4">
           </video>
-          <video autoplay="autoplay" loop="loop" width="49%" controls="controls">
+          <video autoplay controls muted loop playsinlin>
             <source src="./static/videos/14.mp4" type="video/mp4">
           </video>
           </video>
