@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="TuneMV3D: Tuning Foundational Image Diffusion Models for Generalizable and Scalable Multiview 3D Generation">
+    content="TuneMV3D: Tuning Foundational Image Diffusion Models for Generalizable and Scalable Multiview 3D Generation">
   <meta name="keywords" content="TuneMV3D, 3D generation, 2D prior">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TuneMV3D: Tuning Foundational Image Diffusion Models 
+  <title>TuneMV3D: Tuning Foundational Image Diffusion Models
     for Generalizable and Scalable Multiview 3D Generation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -23,15 +24,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -41,100 +40,121 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
-  </div>
-</nav>
+    </div>
+  </nav>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TuneMV3D: Tuning Foundational Image Diffusion Models for Generalizable and Scalable Multiview 3D Generation</h1>
-          <!-- <div class="is-size-5 publication-authors">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">TuneMV3D: Tuning Foundational Image Diffusion Models for
+              Generalizable and Scalable Multiview 3D Generation</h1>
+            <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
           </div>
 
           <div class="is-size-5 publication-authors">
           </div> -->
-          <div>
-            <span class="author-block">
-              Anonymous authors</span>
+            <div>
+              <span class="author-block">
+                Anonymous authors</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Considerable progress has been made in 2D image generation,
-            but 3D content creation lags behind due to a lack of large-scale, high-quality 3D datasets. To mitigate
-            this gap, a recent line of work leverages 2D diffusion models for 3D generation but
-            usually requires object-specific overfitting, making them unscalable. In this paper,
-            we present TuneMV3D, a novel approach to generating diverse and creative 3D
-            content in a scalable feedforward manner. At the core of TuneMV3D, we tune a
-            foundational image diffusion model using a much smaller-scale 3D dataset while
-            utilizing multi-view images to bridge the gap between 2D and 3D. This allows for
-            the direct prediction of consistent, multi-view 3D representations from 2D diffusion
-            models. We design an interactive diffusion scheme that is facilitated by jointly
-            optimized latent Neural Radiance Fields (NeRF) to ensure that the multi-view gen-
-            erations are consistent. Additionally, we propose an alternating guidance sampling
-            strategy that preserves the creativity of the foundational image diffusion model
-            while maintaining multi-view consistency. Using TuneMV3D, we can successfully
-            distill the 3D counterpart of what can be created by a 2D foundation model, thereby
-            generalizing beyond the small 3D tuning set and enabling scalable and diverse 3D
-            content creation.  </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <div class = "has-text-centered">
-          <h2 class="title is-3">Text to Multiview Images</h2>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Considerable progress has been made in 2D image generation,
+              but 3D content creation lags behind due to a lack of large-scale, high-quality 3D datasets. To mitigate
+              this gap, a recent line of work leverages 2D diffusion models for 3D generation but
+              usually requires object-specific overfitting, making them unscalable. In this paper,
+              we present TuneMV3D, a novel approach to generating diverse and creative 3D
+              content in a scalable feedforward manner. At the core of TuneMV3D, we tune a
+              foundational image diffusion model using a much smaller-scale 3D dataset while
+              utilizing multi-view images to bridge the gap between 2D and 3D. This allows for
+              the direct prediction of consistent, multi-view 3D representations from 2D diffusion
+              models. We design an interactive diffusion scheme that is facilitated by jointly
+              optimized latent Neural Radiance Fields (NeRF) to ensure that the multi-view gen-
+              erations are consistent. Additionally, we propose an alternating guidance sampling
+              strategy that preserves the creativity of the foundational image diffusion model
+              while maintaining multi-view consistency. Using TuneMV3D, we can successfully
+              distill the 3D counterpart of what can be created by a 2D foundation model, thereby
+              generalizing beyond the small 3D tuning set and enabling scalable and diverse 3D
+              content creation.
+          </div>
         </div>
-        <img src="./static/images/sample_img1.png" alt="text2img" width="80%" height="80%">
       </div>
-    </div>
-  </div>
-</section>
+      <!--/ Abstract. -->
 
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <div class = "has-text-centered">
-          <h2 class="title is-3">Image to 3D Models</h2>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div class="has-text-centered">
+            <h2 class="title is-3">Text to Multiview Images</h2>
+          </div>
+          <img src="./static/images/sample_img1.png" alt="text2img" width="80%" height="80%">
         </div>
       </div>
     </div>
-  </div>
-</section> -->
+  </section>
 
-<!-- <section class="section">
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div class="has-text-centered">
+            <h2 class="title is-3">Text to 3D Models</h2>
+            <video autoplay="autoplay" loop="loop" width="33%">
+              <source src="./static/videos/132f7c5f552c4baff56b3a2c6b03acf7.mp4" type="video/mp4">
+            </video>
+            <video autoplay="autoplay" loop="loop" width="33%">
+              <source src="./static/videos/2a742ac8fde69b0c80b25fdd5f83aee2.mp4" type="video/mp4">
+            </video >
+            <video autoplay="autoplay" loop="loop" width="33%">
+              <source src="./static/videos/4d9f919276f3bc8513f11277d461856f.mp4" type="video/mp4">
+            </video>
+            <video autoplay="autoplay" loop="loop" width="33%">
+              <source src="./static/videos/c6b640ad924a367d00b2b670d73bc851.mp4" type="video/mp4">
+            </video>
+            <video autoplay="autoplay" loop="loop" width="33%">
+              <source src="./static/videos/ccdb6a8ee06fd215239ba4a03fdc4e0a.mp4" type="video/mp4">
+            </video>
+            <video autoplay="autoplay" loop="loop" width="33%">
+              <source src="./static/videos/f7592d789f891867dfdf36761739e700.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
@@ -146,20 +166,20 @@
   </div>
 </section> -->
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <div class = "has-text-centered">
-          <h2 class="title is-3">More Results</h2>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div class="has-text-centered">
+            <h2 class="title is-3">More Results</h2>
+          </div>
+          <img src="./static/images/sample_img2.png" alt="text2img" width="80%" height="80%">
         </div>
-        <img src="./static/images/sample_img2.png" alt="text2img" width="80%" height="80%">
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -172,29 +192,28 @@
 </section> -->
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is borrowed from  <a
-              href="https://github.com/nerfies/nerfies.github.io">nerfies.</a>
-          </p>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies.</a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
